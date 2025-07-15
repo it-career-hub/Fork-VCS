@@ -10,4 +10,5 @@ if [[ -z "$2" ]]; then
     echo "Copying $filename to $dirname"
        cp "$1" "$2"
        echo "File copied successfully."
+       echo "Done"
   fi
