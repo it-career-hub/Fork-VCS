@@ -6,13 +6,13 @@ if [[ -z "$2" ]]; then
   else
     filename=$(basename "$1")
     dirname=$(dirname "$2")
+
     if [[ ! -z "$dirname" ]]; then
-  echo "Directory "$dirname" doesn't exist"
-  exit 1
-  else
-    mkdir -p "$dirname"
+        echo "Directory "$dirname" doesn't exist"
+         mkdir -p "$dirname"
+    fi     
     echo "Copying $filename to $dirname"
-       cp "$1" "$2"
-       echo "File copied successfully."
-       echo "Done"
-  fi
+    cp "$1" "$2"
+    echo "File copied successfully."
+    echo "Done"
+fi
