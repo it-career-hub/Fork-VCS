@@ -6,7 +6,9 @@ if [[ -z "$2" ]]; then
 else
  filename=$(basename "$1")
  dirname=$(dirname "$2")
- mkdir -p "$dirname"
+  if [[ ! -z "$dirname" ]]; then
+    mkdir -p "$dirname"
+  fi
  echo "Copying $filename to $dirname"
  cp "$1" "$2"
  echo "File copied Successful"
