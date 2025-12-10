@@ -14,7 +14,7 @@ if [ $? -eq 0 ]; then
 else
 echo "Script will be created on path: " $SCRIPTPATH/$NAME
 echo "#!/bin/bash" > $SCRIPTPATH/$NAME
-echo "Write the code here \n" >> $SCRIPTPATH/$NAME
+echo "Write the code here.." >> $SCRIPTPATH/$NAME
 chmod +x $SCRIPTPATH/$NAME
 nano $SCRIPTPATH/$NAME
 echo "Done"
