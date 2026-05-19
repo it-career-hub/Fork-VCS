@@ -21,5 +21,5 @@ ps aux --sort=-%mem | head -n 6
 process_count=$(ps aux | wc -l)
 echo "Process Count: $process_count"
 
-user_count=$(who | wc -l)
+user_count=$(who | awk '{print $1}' | sort | uniq | wc -l)
 echo "User Count: $user_count"
